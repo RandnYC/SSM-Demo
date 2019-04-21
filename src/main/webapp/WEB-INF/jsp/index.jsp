@@ -9,31 +9,39 @@
 </head>
 <body>
 
-<h2 class="page-header"> User表显示所有字段 </h2>
+<div class="container">
+    <div class="row">
+        <div clas="col-md-12">
+            <h2 class="page-header"> User表显示所有字段 </h2>
+        </div>
+    </div>
 
-<table>
-    <tr>
-        <td><button type="button" class="btn btn-primary" onclick="window.location.href='addPage'">添加</button></td>
-        <td><button type="button" class="btn btn-success" onclick="window.location.href='deletePage'">删除</button></td>
-    </tr>
-</table>
 
-<table class="table table-hover table-striped">
-    <tr>
-        <th>编号</th>
-        <th>名字</th>
-        <th>年龄</th>
-        <th>地址</th>
-    </tr>
-    <c:forEach var="user" items='${userList}'>
+    <table class="row">
         <tr>
-            <td>${user.id}</td>
-            <td>${user.name}</td>
-            <td>${user.age}</td>
-            <td>${user.address}</td>
+            <td><button type="button" class="btn btn-primary" onclick="window.location.href='addPage'">添加</button></td>
+            <td><button type="button" class="btn btn-success" onclick="window.location.href='deletePage'">删除</button></td>
         </tr>
-    </c:forEach>
-</table>
+    </table>
+
+    <table class="row table table-hover table-striped">
+        <tr>
+            <th>编号</th>
+            <th>名字</th>
+            <th>年龄</th>
+            <th>地址</th>
+        </tr>
+        <c:forEach var="user" items='${userList}'>
+            <tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.age}</td>
+                <td>${user.address}</td>
+            </tr>
+        </c:forEach>
+    </table>
+
+</div>
 
 </body>
 </html>
